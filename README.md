@@ -4,7 +4,7 @@
 
 This is based on https://www.youtube.com/watch?v=Ep6R7U9wa0U.<br>
 Through practising the Flutter BLoC pattern, I can get used to it.<br>
-Additionally, it controls light and dark themes.<br>
+Additionally, it controls light and dark themes.<br><br>
 <img src="/public/switch_theme.gif" width="240">
 <img src="/public/pizza.gif" width="240">
 
