@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:pizza/pizza/models/pizza_model.dart';
+import 'package:pizza/pizza/model/pizza_model.dart';
 
 part 'pizza_event.dart';
 part 'pizza_state.dart';
@@ -21,6 +21,12 @@ class PizzaBloc extends Bloc<PizzaEvent, PizzaState> {
       if (state is PizzaLoaded) {
         final state = this.state as PizzaLoaded;
         emit(PizzaLoaded(pizzas: List.from(state.pizzas)..remove(event.pizza)));
+      }
+    });
+    on<ClearPizza>((event, emit) {
+      if (state is PizzaLoaded) {
+        final state = this.state as PizzaLoaded;
+        emit(PizzaLoaded(pizzas: List.from(state.pizzas)..clear()));
       }
     });
   }

@@ -30,4 +30,4 @@ class RemovePizza extends PizzaEvent {
   List<Object> get props => [pizza];
 }
 
-class REmovePizza extends PizzaEvent {}
+class ClearPizza extends PizzaEvent {}
